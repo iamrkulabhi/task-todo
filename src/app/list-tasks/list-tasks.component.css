@@ -1,0 +1,7 @@
+.close {
+    cursor: pointer;
+    color: red !important;
+}
+.task-name {
+    color: inherit;
+}

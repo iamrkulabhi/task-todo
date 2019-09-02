@@ -1,0 +1,12 @@
+<div class="alert alert-success text-center" 
+role="alert" 
+[class.fadout]="alertType === 'success'"
+*ngIf="alertMessage && alertType === 'success'">
+    {{alertMessage}}
+</div>
+<div class="alert alert-danger text-center" 
+role="alert" 
+[class.fadout]="alertType === 'failed'"
+*ngIf="alertMessage && alertType === 'failed'">
+    {{alertMessage}}
+</div>

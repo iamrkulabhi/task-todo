@@ -1,0 +1,10 @@
+<div class="add-section">
+    <form #f="ngForm" (ngSubmit)="addTask()">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Type Name" aria-label="Type Name" aria-describedby="basic-addon2" name="taskName" [(ngModel)]="taskName" required/>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" [disabled]="!f.valid">Add Task</button>
+            </div>
+        </div>
+    </form>
+</div>
