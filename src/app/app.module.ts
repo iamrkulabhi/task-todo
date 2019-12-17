@@ -10,6 +10,10 @@ import { TasksService } from './tasks.service';
 
 import { FormsModule } from '@angular/forms';
 import { MessgaesComponent } from './messgaes/messgaes.component';
+import { ModalComponent } from './modal/modal.component';
+import { SeachTaskComponent } from './seach-task/seach-task.component';
+import { SearchTasksPipe } from './seach-task/search-tasks.pipe';
+import { TasksDirective } from './tasks.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { MessgaesComponent } from './messgaes/messgaes.component';
     AddTaskComponent,
     ListTasksComponent,
     EditTaskComponent,
-    MessgaesComponent
+    MessgaesComponent,
+    ModalComponent,
+    SeachTaskComponent,
+    SearchTasksPipe,
+    TasksDirective
   ],
   imports: [
     BrowserModule,

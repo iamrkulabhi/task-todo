@@ -14,13 +14,14 @@ export class MessgaesComponent implements OnInit, OnDestroy {
   alertMessage = '';
   subcription: Subscription;
 
-  constructor(private alertService: AlertMessageService) {  
+  constructor(private alertService: AlertMessageService) {
     this.subcription = this.alertService.getMessage().subscribe(
       (data: Alert) => {
         this.alertType = data.type;
         this.alertMessage = data.message;
+        setTimeout(() => { this.alertType = ''; this.alertMessage = ''; }, 1500);
       }
-    );  
+    );
   }
 
   ngOnInit() {
