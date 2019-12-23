@@ -1,8 +1,15 @@
 <app-add-task></app-add-task>
+<app-seach-task [(searchText)]="searchText"></app-seach-task>
 <div class="list-section">
-    <h2 class="text-center">All Task</h2>
+    <h2 class="text-center">All Tasks</h2>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let task of tasks; let i = index"><strong>{{i+1}}. <a class="task-name" routerLink="/edit-task/{{i}}">{{task.taskName}}</a></strong><a class="close" (click)="deleteTask(i)">&times;</a></li>
+        <li class="list-group-item" *ngFor="let task of tasks | searchTasks: searchText; let i = index" [taskStatusDir]="task.taskStatus">
+            <strong>
+                {{i+1}}. 
+                <a class="task-name" routerLink="/edit-task/{{i}}">{{task.taskName}}</a>
+            </strong>
+            <a class="close" (click)="deleteTask(i)" *ngIf="showDeleteOption">&times;</a>
+        </li>
     </ul>
 </div>
 

@@ -26,10 +26,10 @@ export class EditTaskComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.activateRoute.params.subscribe(
+    this.activateRoute.paramMap.subscribe(
       params => {
-        this.taskId = +params['id'];
-        let task = this.taskService.getTask(+params['id']);
+        this.taskId = +params.get('id');
+        let task = this.taskService.getTask(this.taskId);
         if (task) {
           this.form.taskName = task.taskName;
           this.form.taskDesc = task.taskDesc;
@@ -43,6 +43,10 @@ export class EditTaskComponent implements OnInit {
     console.log(this.form);
     this.taskService.updateTaskList(this.taskId, this.form);
     this.alertService.sendMessage('success', 'Task updated!');
+    this.goToTaskList();
+  }
+
+  goToTaskList() {
     this.router.navigate(['/']);
   }
 

@@ -17,6 +17,7 @@
                 <option value="pending">Pending</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!editForm.valid">Update</button>
+        <button type="submit" class="btn btn-primary mr-4" [disabled]="!editForm.valid">Update</button>
+        <button type="button" class="btn btn-danger" (click)="goToTaskList()">Cancel</button>
     </form>
 </div>
