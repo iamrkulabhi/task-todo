@@ -14,8 +14,11 @@ import { ModalComponent } from './modal/modal.component';
 import { SeachTaskComponent } from './seach-task/seach-task.component';
 import { SearchTasksPipe } from './seach-task/search-tasks.pipe';
 import { TasksDirective } from './tasks.directive';
+<<<<<<< HEAD
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './users/login/login.component';
+=======
+>>>>>>> 2d834d042f8361868755f395680e34b2dea9bf95
 
 @NgModule({
   declarations: [
@@ -27,9 +30,13 @@ import { LoginComponent } from './users/login/login.component';
     ModalComponent,
     SeachTaskComponent,
     SearchTasksPipe,
+<<<<<<< HEAD
     TasksDirective,
     HeaderComponent,
     LoginComponent
+=======
+    TasksDirective
+>>>>>>> 2d834d042f8361868755f395680e34b2dea9bf95
   ],
   imports: [
     BrowserModule,

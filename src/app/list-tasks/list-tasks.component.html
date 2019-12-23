@@ -8,7 +8,11 @@
                 {{i+1}}. 
                 <a class="task-name" routerLink="/edit-task/{{i}}">{{task.taskName}}</a>
             </strong>
+<<<<<<< HEAD
             <a class="close" (click)="deleteTask(i)" *ngIf="showDeleteOption">&times;</a>
+=======
+            <a class="close" (click)="deleteTask(i)">&times;</a>
+>>>>>>> 2d834d042f8361868755f395680e34b2dea9bf95
         </li>
     </ul>
 </div>
